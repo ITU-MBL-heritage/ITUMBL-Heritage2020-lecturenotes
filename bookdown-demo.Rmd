@@ -1,0 +1,116 @@
+--- 
+title: "MBL549 Machine Learning in Architecture"
+author: "Özgün Balaban"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+description: "MBL549 Syllabus"
+---
+# Syllabus {#intro}
+
+## Class Schedule
+
+**Spring 2020**
+Tuesday 13:30-1630
+
+## Content
+The course is an introduction to Machine Learning methods with examples from architectural design and creative coding. The course follows a hands on approach with many examples that will be developed during the course. The course includes topics from machine learning such as linear regression, unsupervised learning, supervised learning, reinforcement learning and finally neural networks. 
+## Aims
+To have students acquire practical knowledge on the tools of machine learning and different methodologies. To have students knowledge of applying these techniques to creative design process. 
+
+## Conduct
+The first half of the term includes introduction to the various machine learning topics. In this phase there will be practical coding sessions and some assignments which will be graded. In the second half of the term we will focus on a group project which will be developed using neural networks. 
+
+## Assessment
+
+The grading for the course is as follows: hands-on practices, 50%; final group project 50%.
+
+### Assignments
+TBA
+
+### Final Project
+TBA
+
+## Software
+We will use Python in an Anaconda environment. 
+
+## Outline
+
+**Week 1** Introduction
+
+**Week 2** Refresher on Python
+
+**Week 3** Data scraping & Linear Regression
+
+**week 4** Unsupervised Learning
+
+**Week 5** Supervised Learning
+
+**Week 6** Reinforcement Learning
+
+**Week 7** Introduction to Neural Networks
+
+**Week 8** Break
+
+**Week 9** Neural Network examples - Project Discussion
+
+**Week 10** Neural Network examples
+
+**Week 11** Neural Network examples
+
+**Week 12** Projects
+
+**Week 13** Projects
+
+**Week 14** Projects
+
+**Week 15** Projects
+
+
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
+
+<!--chapter:end:index.Rmd-->
+
+# Week 1
+
+In the first week we had a talk about the course syllabus and discussed about Machine Learning examples.
+
+For the second week we will do a refresher on Python. Please bring your laptops and install Anaconda with Python 3.7.
+
+## Install Anaconda
+
+1. Install Anaconda   
+  https://www.anaconda.com/distribution/#download-section
+2. Click on start menu and choose anaconda prompt’(windows) OR run terminal (osx/ubuntu)
+3. Create a virtual environment (e.g. ‘mbl-ml’, could be any name you like):  
+• > conda create -n mbl-ml python=3.7 ipykernel
+4. Activate the virtual environment:  
+• > source activate mbl-ml
+5. Install dependencies:  
+• Change directory to where the given file (requirements.txt) resides.  
+• > cd (just drag your folder into the cmd/terminal)  
+• > pip install -r requirements.txt  
+6. Make kernel accessible in jupyter notebook:  
+• > python -m ipykernel install --user --name mbl-ml  
+7. Go to the directory that you would like to save your notebooks
+• > cd (just drag your folder into the cmd/terminal)
+8. Run jupyter notebook:
+• > jupyter notebook
+9. Create new file and set kernel to ‘mbl-ml’
+10. To shut down jupyter:
+• Press cmd ‘C’ or > ctrl ‘C’ at the terminal/cmd prompt
+11. To deactivate virtual environment:
+• > conda deactivate
+
+<!--chapter:end:01-intro.Rmd-->
+
