@@ -1,0 +1,8 @@
+# Week 2
+
+In the second week we had a refresher class on version control using Github and Python programming.
+
+Optional readings are below:
+
+  - Reading:
+    - [Excuse me, do you have a moment to talk about version control?](https://peerj.com/preprints/3159/)

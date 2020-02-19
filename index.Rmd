@@ -18,7 +18,8 @@ description: "MBL549 Syllabus"
 Tuesday 13:30-1630
 
 ## Content
-The course is an introduction to Machine Learning methods with examples from architectural design and creative coding. The course follows a hands on approach with many examples that will be developed during the course. The course includes topics from machine learning such as linear regression, unsupervised learning, supervised learning, reinforcement learning and finally neural networks. 
+The course is an introduction to Machine Learning methods with examples from architectural design and creative coding. The course follows a hands on approach with many examples that will be developed during the course. The course includes topics from machine learning such as linear regression, unsupervised learning, supervised learning, reinforcement learning and finally neural networks.  
+
 ## Aims
 To have students acquire practical knowledge on the tools of machine learning and different methodologies. To have students knowledge of applying these techniques to creative design process. 
 
