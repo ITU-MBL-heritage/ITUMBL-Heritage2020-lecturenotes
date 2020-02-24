@@ -4,24 +4,24 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>MBL549 Machine Learning in Architecture</title>
-  <meta name="description" content="MBL549 Syllabus" />
+  <title>MBL617 Theory and Methods in Digital Heritage</title>
+  <meta name="description" content="MBL617 Lecture Notes" />
   <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="MBL549 Machine Learning in Architecture" />
+  <meta property="og:title" content="MBL617 Theory and Methods in Digital Heritage" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="MBL549 Syllabus" />
+  <meta property="og:description" content="MBL617 Lecture Notes" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="MBL549 Machine Learning in Architecture" />
+  <meta name="twitter:title" content="MBL617 Theory and Methods in Digital Heritage" />
   
-  <meta name="twitter:description" content="MBL549 Syllabus" />
+  <meta name="twitter:description" content="MBL617 Lecture Notes" />
   
 
-<meta name="author" content="Özgün Balaban" />
+<meta name="author" content="Özgün Balaban Güzden Varinlioğlu" />
 
 
 
@@ -31,7 +31,7 @@
   
   
 
-<link rel="next" href="week-1.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -68,22 +68,15 @@
 <li><a href="./">MBL549 Machine Learning in Architecture</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Syllabus</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#class-schedule"><i class="fa fa-check"></i><b>1.1</b> Class Schedule</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#content"><i class="fa fa-check"></i><b>1.2</b> Content</a></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#aims"><i class="fa fa-check"></i><b>1.3</b> Aims</a></li>
-<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#conduct"><i class="fa fa-check"></i><b>1.4</b> Conduct</a></li>
-<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#assessment"><i class="fa fa-check"></i><b>1.5</b> Assessment</a><ul>
-<li class="chapter" data-level="1.5.1" data-path="index.html"><a href="index.html#assignments"><i class="fa fa-check"></i><b>1.5.1</b> Assignments</a></li>
-<li class="chapter" data-level="1.5.2" data-path="index.html"><a href="index.html#final-project"><i class="fa fa-check"></i><b>1.5.2</b> Final Project</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="#intro"><i class="fa fa-check"></i><b>1</b> QGIS</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="#installing-qgis"><i class="fa fa-check"></i><b>1.1</b> Installing QGIS</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="#familiarizing-yourself-with-qgis-desktop"><i class="fa fa-check"></i><b>1.1.1</b> Familiarizing yourself with QGIS Desktop</a></li>
 </ul></li>
-<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#software"><i class="fa fa-check"></i><b>1.6</b> Software</a></li>
-<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#outline"><i class="fa fa-check"></i><b>1.7</b> Outline</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="#vector-data"><i class="fa fa-check"></i><b>1.2</b> Vector Data</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="#types-of-vector-data-in-qgis"><i class="fa fa-check"></i><b>1.2.1</b> Types of vector data in QGIS</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="week-1.html"><a href="week-1.html"><i class="fa fa-check"></i><b>2</b> Week 1</a><ul>
-<li class="chapter" data-level="2.1" data-path="week-1.html"><a href="week-1.html#install-anaconda"><i class="fa fa-check"></i><b>2.1</b> Install Anaconda</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="#raster-data"><i class="fa fa-check"></i><b>1.3</b> Raster Data</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="week-2.html"><a href="week-2.html"><i class="fa fa-check"></i><b>3</b> Week 2</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -96,7 +89,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MBL549 Machine Learning in Architecture</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MBL617 Theory and Methods in Digital Heritage</a>
           </h1>
         </div>
 
@@ -105,61 +98,51 @@
 
             <section class="normal" id="section-">
 <div id="header">
-<h1 class="title">MBL549 Machine Learning in Architecture</h1>
-<p class="author"><em>Özgün Balaban</em></p>
+<h1 class="title">MBL617 Theory and Methods in Digital Heritage</h1>
+<p class="author"><em>Özgün Balaban Güzden Varinlioğlu</em></p>
 </div>
 <div id="intro" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Syllabus</h1>
-<div id="class-schedule" class="section level2">
-<h2><span class="header-section-number">1.1</span> Class Schedule</h2>
-<p><strong>Spring 2020</strong>
-Tuesday 13:30-1630</p>
+<h1><span class="header-section-number">Chapter 1</span> QGIS</h1>
+<div id="installing-qgis" class="section level2">
+<h2><span class="header-section-number">1.1</span> Installing QGIS</h2>
+<p>There are two options for installation:<br />
+* OSGeo4<br />
+* Standalone Installer</p>
+<div id="familiarizing-yourself-with-qgis-desktop" class="section level3">
+<h3><span class="header-section-number">1.1.1</span> Familiarizing yourself with QGIS Desktop</h3>
+<div class="figure">
+<img src="Images/gui.png" alt="QGIS GUI" />
+<p class="caption">QGIS GUI</p>
 </div>
-<div id="content" class="section level2">
-<h2><span class="header-section-number">1.2</span> Content</h2>
-<p>The course is an introduction to Machine Learning methods with examples from architectural design and creative coding. The course follows a hands on approach with many examples that will be developed during the course. The course includes topics from machine learning such as linear regression, unsupervised learning, supervised learning, reinforcement learning and finally neural networks.</p>
-</div>
-<div id="aims" class="section level2">
-<h2><span class="header-section-number">1.3</span> Aims</h2>
-<p>To have students acquire practical knowledge on the tools of machine learning and different methodologies. To have students knowledge of applying these techniques to creative design process.</p>
-</div>
-<div id="conduct" class="section level2">
-<h2><span class="header-section-number">1.4</span> Conduct</h2>
-<p>The first half of the term includes introduction to the various machine learning topics. In this phase there will be practical coding sessions and some assignments which will be graded. In the second half of the term we will focus on a group project which will be developed using neural networks.</p>
-</div>
-<div id="assessment" class="section level2">
-<h2><span class="header-section-number">1.5</span> Assessment</h2>
-<p>The grading for the course is as follows: hands-on practices, 50%; final group project 50%.</p>
-<div id="assignments" class="section level3">
-<h3><span class="header-section-number">1.5.1</span> Assignments</h3>
-<p>TBA</p>
-</div>
-<div id="final-project" class="section level3">
-<h3><span class="header-section-number">1.5.2</span> Final Project</h3>
-<p>TBA</p>
+<ol style="list-style-type: decimal">
+<li>Menu Bar</li>
+<li>Toolbars</li>
+<li>Panel</li>
+<li>Map Canvas</li>
+<li>Status Bar</li>
+</ol>
 </div>
 </div>
-<div id="software" class="section level2">
-<h2><span class="header-section-number">1.6</span> Software</h2>
-<p>We will use Python in an Anaconda environment.</p>
+<div id="vector-data" class="section level2">
+<h2><span class="header-section-number">1.2</span> Vector Data</h2>
+<div id="types-of-vector-data-in-qgis" class="section level3">
+<h3><span class="header-section-number">1.2.1</span> Types of vector data in QGIS</h3>
+<ul>
+<li>Points</li>
+<li>Lines</li>
+<li>Polygons</li>
+</ul>
+<blockquote>
+<p>layer &gt; add layer &gt; add vector layer
+File
+Folder
+Database
+Protocol</p>
+</blockquote>
 </div>
-<div id="outline" class="section level2">
-<h2><span class="header-section-number">1.7</span> Outline</h2>
-<p><strong>Week 1</strong> Introduction</p>
-<p><strong>Week 2</strong> Refresher on Python</p>
-<p><strong>Week 3</strong> Data scraping &amp; Linear Regression</p>
-<p><strong>week 4</strong> Unsupervised Learning</p>
-<p><strong>Week 5</strong> Supervised Learning</p>
-<p><strong>Week 6</strong> Reinforcement Learning</p>
-<p><strong>Week 7</strong> Introduction to Neural Networks</p>
-<p><strong>Week 8</strong> Break</p>
-<p><strong>Week 9</strong> Neural Network examples - Project Discussion</p>
-<p><strong>Week 10</strong> Neural Network examples</p>
-<p><strong>Week 11</strong> Neural Network examples</p>
-<p><strong>Week 12</strong> Projects</p>
-<p><strong>Week 13</strong> Projects</p>
-<p><strong>Week 14</strong> Projects</p>
-<p><strong>Week 15</strong> Projects</p>
+</div>
+<div id="raster-data" class="section level2">
+<h2><span class="header-section-number">1.3</span> Raster Data</h2>
 
 </div>
 </div>
@@ -169,7 +152,7 @@ Tuesday 13:30-1630</p>
         </div>
       </div>
 
-<a href="week-1.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

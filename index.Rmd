@@ -1,6 +1,6 @@
 --- 
-title: "MBL549 Machine Learning in Architecture"
-author: "Özgün Balaban"
+title: "MBL617 Theory and Methods in Digital Heritage"
+author: "Özgün Balaban Güzden Varinlioğlu"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
@@ -8,68 +8,47 @@ bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: rstudio/bookdown-demo
-description: "MBL549 Syllabus"
+description: "MBL617 Lecture Notes"
 ---
-# Syllabus {#intro}
+# QGIS {#intro}
 
-## Class Schedule
+## Installing QGIS
 
-**Spring 2020**
-Tuesday 13:30-1630
+There are two options for installation:  
+* OSGeo4  
+* Standalone Installer  
 
-## Content
-The course is an introduction to Machine Learning methods with examples from architectural design and creative coding. The course follows a hands on approach with many examples that will be developed during the course. The course includes topics from machine learning such as linear regression, unsupervised learning, supervised learning, reinforcement learning and finally neural networks.  
 
-## Aims
-To have students acquire practical knowledge on the tools of machine learning and different methodologies. To have students knowledge of applying these techniques to creative design process. 
+### Familiarizing yourself with QGIS Desktop
 
-## Conduct
-The first half of the term includes introduction to the various machine learning topics. In this phase there will be practical coding sessions and some assignments which will be graded. In the second half of the term we will focus on a group project which will be developed using neural networks. 
+![QGIS GUI](Images/gui.png) 
 
-## Assessment
+1. Menu Bar
+2. Toolbars
+3. Panel
+4. Map Canvas
+5. Status Bar
 
-The grading for the course is as follows: hands-on practices, 50%; final group project 50%.
 
-### Assignments
-TBA
 
-### Final Project
-TBA
 
-## Software
-We will use Python in an Anaconda environment. 
+## Vector Data
 
-## Outline
+### Types of vector data in QGIS
 
-**Week 1** Introduction
+* Points
+* Lines
+* Polygons
 
-**Week 2** Refresher on Python
+>layer > add layer > add vector layer
+File
+Folder
+Database
+Protocol
 
-**Week 3** Data scraping & Linear Regression
 
-**week 4** Unsupervised Learning
 
-**Week 5** Supervised Learning
-
-**Week 6** Reinforcement Learning
-
-**Week 7** Introduction to Neural Networks
-
-**Week 8** Break
-
-**Week 9** Neural Network examples - Project Discussion
-
-**Week 10** Neural Network examples
-
-**Week 11** Neural Network examples
-
-**Week 12** Projects
-
-**Week 13** Projects
-
-**Week 14** Projects
-
-**Week 15** Projects
+## Raster Data
 
 
 
