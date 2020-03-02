@@ -1,0 +1,17 @@
+# 3D Maps
+
+We can create 3D maps to visualize the map in 3D. To do this
+
+>View >New 3D Map
+
+![Adding 3D Map](Images\New3Dmap.png)
+
+That opens up a new window with 3D view. You can adjust, pan, zoom to the map.
+
+![3D Map Example](Images\3Dmap.png)
+
+
+We can make the vectors from the buildings into 3D objects. For this go to 3D View from layer Properties. Select extrusion and you can set one value for every polygon. Or you can assign a variable by clicking to the icon at the right and setting a variable for extrusion.
+
+
+![3D Map Example with 3D polygons](Images\3Dbuildings.png)

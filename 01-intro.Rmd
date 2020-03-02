@@ -1,0 +1,20 @@
+# Quick Start to QGIS
+
+## Installing QGIS
+
+There are two options for installation:  
+* OSGeo4  
+* Standalone Installer  
+
+
+## Familiarizing yourself with QGIS Desktop
+
+![QGIS GUI](Images/gui.png) 
+
+1. Menu Bar
+2. Toolbars
+3. Panel
+4. Map Canvas
+5. Status Bar
+
+

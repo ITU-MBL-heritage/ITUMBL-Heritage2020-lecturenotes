@@ -10,45 +10,38 @@ link-citations: yes
 github-repo: rstudio/bookdown-demo
 description: "MBL617 Lecture Notes"
 ---
-# QGIS {#intro}
-
-## Installing QGIS
-
-There are two options for installation:  
-* OSGeo4  
-* Standalone Installer  
+# Syllabus {#intro}
 
 
-### Familiarizing yourself with QGIS Desktop
+## Content 
 
-![QGIS GUI](Images/gui.png) 
+The course is an introduction to **Digital Heritage** and has a two-fold purpose. In addition to giving an overview of theories and principles in digital heritage, both in Turkey and internationally, the course gives an introduction to research methods in three areas related to cultural heritage: **collection/management, visualization/communication,** and **analysis/ interpretation.**
 
-1. Menu Bar
-2. Toolbars
-3. Panel
-4. Map Canvas
-5. Status Bar
+## Aims
 
+To help students understand the link between cultural heritage and computing; to introduce key issues in digital heritage; to provide students with the basic theoretical and practical knowledge of digital methods such as GIS, AR/VR, AI. 
 
+## Learning outcomes
 
+Students who take this course gain will knowledge, ability and proficiency in the following subjects:
 
-## Vector Data
-
-### Types of vector data in QGIS
-
-* Points
-* Lines
-* Polygons
-
->layer > add layer > add vector layer
-File
-Folder
-Database
-Protocol
+- Knowledge of historical, contemporary and specialized issues in the area of visual computation through original research,
+- Understanding of the interdisciplinarity of computation in cultural heritage,
+- Ability to assess methods and applications of digital heritage through systematic approaches,
+- Ability to assess and apply research methodology,
+- Competence in creative and critical thinking, problem-solving and decision making.
 
 
+## Conduct
 
-## Raster Data
+The course will be conducted as seminars with weekly readings and assignments. During the course of the semester, students are required to submit written and practical assignments as requested by the instructors during class, and one final paper, based on either literature research or an original argument, and an in-class presentation of the final paper at the semester end. The essays submitted throughout the semester are to constitute the basis for the final paper; these should take into account class discussions, as well as students’ own reflections. The final paper should be around 3000 words and structured with an introduction, development, and conclusion. The grading for the course is as follows: attendance and in-class participation in discussions and weekly response papers, 30%; hands-on practices, 30%; one end-of-semester paper, 20%; final project presentation by individual/group 20%.
+
+## Project
+
+The collective efforts of the course participants will be part of a digital heritage project on Caravanserais of Anatolia. **All works will be uploaded to the website.**
+
+## Weekly Schedule
+
 
 
 

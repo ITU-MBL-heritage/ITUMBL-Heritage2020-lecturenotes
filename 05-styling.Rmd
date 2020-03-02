@@ -1,0 +1,14 @@
+# Styling Data
+
+QGIS is very flexible in styling data. We can style our layers to visualize the information better.
+
+## Points
+
+
+## Polylines
+
+
+## Polygons
+
+
+## Raster

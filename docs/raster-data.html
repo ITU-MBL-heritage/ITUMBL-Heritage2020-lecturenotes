@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>MBL617 Theory and Methods in Digital Heritage</title>
+  <title>Chapter 4 Raster Data | MBL617 Theory and Methods in Digital Heritage</title>
   <meta name="description" content="MBL617 Lecture Notes" />
   <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="MBL617 Theory and Methods in Digital Heritage" />
+  <meta property="og:title" content="Chapter 4 Raster Data | MBL617 Theory and Methods in Digital Heritage" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="MBL617 Theory and Methods in Digital Heritage" />
+  <meta name="twitter:title" content="Chapter 4 Raster Data | MBL617 Theory and Methods in Digital Heritage" />
   
   <meta name="twitter:description" content="MBL617 Lecture Notes" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="quick-start-to-qgis.html"/>
+<link rel="prev" href="vector-data.html"/>
+<link rel="next" href="d-maps.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -91,12 +91,7 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="d-maps.html"><a href="d-maps.html"><i class="fa fa-check"></i><b>5</b> 3D Maps</a></li>
-<li class="chapter" data-level="6" data-path="styling-data.html"><a href="styling-data.html"><i class="fa fa-check"></i><b>6</b> Styling Data</a><ul>
-<li class="chapter" data-level="6.1" data-path="styling-data.html"><a href="styling-data.html#points"><i class="fa fa-check"></i><b>6.1</b> Points</a></li>
-<li class="chapter" data-level="6.2" data-path="styling-data.html"><a href="styling-data.html#polylines"><i class="fa fa-check"></i><b>6.2</b> Polylines</a></li>
-<li class="chapter" data-level="6.3" data-path="styling-data.html"><a href="styling-data.html#polygons"><i class="fa fa-check"></i><b>6.3</b> Polygons</a></li>
-<li class="chapter" data-level="6.4" data-path="styling-data.html"><a href="styling-data.html#raster"><i class="fa fa-check"></i><b>6.4</b> Raster</a></li>
-</ul></li>
+<li class="chapter" data-level="6" data-path="styling-data.html"><a href="styling-data.html"><i class="fa fa-check"></i><b>6</b> Styling Data</a></li>
 <li class="chapter" data-level="7" data-path="printing-maps.html"><a href="printing-maps.html"><i class="fa fa-check"></i><b>7</b> Printing Maps</a></li>
 <li class="chapter" data-level="8" data-path="creating-data.html"><a href="creating-data.html"><i class="fa fa-check"></i><b>8</b> Creating Data</a></li>
 <li class="chapter" data-level="9" data-path="databases.html"><a href="databases.html"><i class="fa fa-check"></i><b>9</b> Databases</a></li>
@@ -120,42 +115,61 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">MBL617 Theory and Methods in Digital Heritage</h1>
-<p class="author"><em>Özgün Balaban Güzden Varinlioğlu</em></p>
-</div>
-<div id="intro" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Syllabus</h1>
-<div id="content" class="section level2">
-<h2><span class="header-section-number">1.1</span> Content</h2>
-<p>The course is an introduction to <strong>Digital Heritage</strong> and has a two-fold purpose. In addition to giving an overview of theories and principles in digital heritage, both in Turkey and internationally, the course gives an introduction to research methods in three areas related to cultural heritage: <strong>collection/management, visualization/communication,</strong> and <strong>analysis/ interpretation.</strong></p>
-</div>
-<div id="aims" class="section level2">
-<h2><span class="header-section-number">1.2</span> Aims</h2>
-<p>To help students understand the link between cultural heritage and computing; to introduce key issues in digital heritage; to provide students with the basic theoretical and practical knowledge of digital methods such as GIS, AR/VR, AI.</p>
-</div>
-<div id="learning-outcomes" class="section level2">
-<h2><span class="header-section-number">1.3</span> Learning outcomes</h2>
-<p>Students who take this course gain will knowledge, ability and proficiency in the following subjects:</p>
+<div id="raster-data" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Raster Data</h1>
 <ul>
-<li>Knowledge of historical, contemporary and specialized issues in the area of visual computation through original research,</li>
-<li>Understanding of the interdisciplinarity of computation in cultural heritage,</li>
-<li>Ability to assess methods and applications of digital heritage through systematic approaches,</li>
-<li>Ability to assess and apply research methodology,</li>
-<li>Competence in creative and critical thinking, problem-solving and decision making.</li>
+<li>Image based</li>
+<li>Georeferencing</li>
+<li>TIFF</li>
+</ul>
+<blockquote>
+<p>layer &gt; add layer &gt; add Raster layer</p>
+</blockquote>
+<div id="crs---coordinate-reference-systems" class="section level2">
+<h2><span class="header-section-number">4.1</span> CRS - Coordinate Reference Systems</h2>
+<ul>
+<li>4326 – Google Earth
+<ul>
+<li>Degrees – lat long</li>
+<li>globe</li>
+</ul></li>
+<li>3857 – Google Maps
+<ul>
+<li>Meters</li>
+<li>map</li>
+</ul></li>
+<li>Many others</li>
 </ul>
 </div>
-<div id="conduct" class="section level2">
-<h2><span class="header-section-number">1.4</span> Conduct</h2>
-<p>The course will be conducted as seminars with weekly readings and assignments. During the course of the semester, students are required to submit written and practical assignments as requested by the instructors during class, and one final paper, based on either literature research or an original argument, and an in-class presentation of the final paper at the semester end. The essays submitted throughout the semester are to constitute the basis for the final paper; these should take into account class discussions, as well as students’ own reflections. The final paper should be around 3000 words and structured with an introduction, development, and conclusion. The grading for the course is as follows: attendance and in-class participation in discussions and weekly response papers, 30%; hands-on practices, 30%; one end-of-semester paper, 20%; final project presentation by individual/group 20%.</p>
+<div id="raster-file-types" class="section level2">
+<h2><span class="header-section-number">4.2</span> Raster File types</h2>
+<div id="wms" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> WMS</h3>
+<p>WMS - Web map services:
+<a href="https://mrdata.usgs.gov/services/ofr20051294?request=GetCapabilities&amp;service=WMS&amp;version=1.3.0" class="uri">https://mrdata.usgs.gov/services/ofr20051294?request=GetCapabilities&amp;service=WMS&amp;version=1.3.0</a></p>
 </div>
-<div id="project" class="section level2">
-<h2><span class="header-section-number">1.5</span> Project</h2>
-<p>The collective efforts of the course participants will be part of a digital heritage project on Caravanserais of Anatolia. <strong>All works will be uploaded to the website.</strong></p>
+<div id="dem---digital-elevation-model" class="section level3">
+<h3><span class="header-section-number">4.2.2</span> DEM - Digital Elevation Model</h3>
+<p>DEM is special satellite image that represents elevation of the terrain in a raster graphic. Every pixel value represents elevation on the terrain.</p>
+<div class="figure">
+<img src="Images/DEM.png" alt="DEM" />
+<p class="caption">DEM</p>
 </div>
-<div id="weekly-schedule" class="section level2">
-<h2><span class="header-section-number">1.6</span> Weekly Schedule</h2>
+<p>We can add DEM images similar to other raster files.</p>
+<p>We can convert raster DEM files to vector contour lines.</p>
+<blockquote>
+<p>GDAL&gt;Raster extraction&gt;Contour</p>
+</blockquote>
+<div class="figure">
+<img src="Images/Contour.png" alt="Contour" />
+<p class="caption">Contour</p>
+</div>
+<div class="figure">
+<img src="Images/Contoursfinished.png" alt="After extracting the contours" />
+<p class="caption">After extracting the contours</p>
+</div>
 
+</div>
 </div>
 </div>
             </section>
@@ -163,8 +177,8 @@
           </div>
         </div>
       </div>
-
-<a href="quick-start-to-qgis.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="vector-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="d-maps.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -195,7 +209,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-raster.Rmd",
 "text": "Edit"
 },
 "history": {

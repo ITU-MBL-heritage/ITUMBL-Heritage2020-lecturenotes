@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Vector Data | MBL617 Theory and Methods in Digital Heritage</title>
+  <meta name="description" content="MBL617 Lecture Notes" />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Vector Data | MBL617 Theory and Methods in Digital Heritage" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="MBL617 Lecture Notes" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Vector Data | MBL617 Theory and Methods in Digital Heritage" />
+  
+  <meta name="twitter:description" content="MBL617 Lecture Notes" />
+  
+
+<meta name="author" content="Özgün Balaban Güzden Varinlioğlu" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="quick-start-to-qgis.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">MBL617 Theory and Methods in Digital Heritage</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Syllabus</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#content"><i class="fa fa-check"></i><b>1.1</b> Content</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#aims"><i class="fa fa-check"></i><b>1.2</b> Aims</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#learning-outcomes"><i class="fa fa-check"></i><b>1.3</b> Learning outcomes</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#conduct"><i class="fa fa-check"></i><b>1.4</b> Conduct</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#project"><i class="fa fa-check"></i><b>1.5</b> Project</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#weekly-schedule"><i class="fa fa-check"></i><b>1.6</b> Weekly Schedule</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="quick-start-to-qgis.html"><a href="quick-start-to-qgis.html"><i class="fa fa-check"></i><b>2</b> Quick Start to QGIS</a><ul>
+<li class="chapter" data-level="2.1" data-path="quick-start-to-qgis.html"><a href="quick-start-to-qgis.html#installing-qgis"><i class="fa fa-check"></i><b>2.1</b> Installing QGIS</a></li>
+<li class="chapter" data-level="2.2" data-path="quick-start-to-qgis.html"><a href="quick-start-to-qgis.html#familiarizing-yourself-with-qgis-desktop"><i class="fa fa-check"></i><b>2.2</b> Familiarizing yourself with QGIS Desktop</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="vector-data.html"><a href="vector-data.html"><i class="fa fa-check"></i><b>3</b> Vector Data</a><ul>
+<li class="chapter" data-level="3.1" data-path="vector-data.html"><a href="vector-data.html#types-of-vector-data-in-qgis"><i class="fa fa-check"></i><b>3.1</b> Types of vector data in QGIS</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MBL617 Theory and Methods in Digital Heritage</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="vector-data" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Vector Data</h1>
+<div id="types-of-vector-data-in-qgis" class="section level2">
+<h2><span class="header-section-number">3.1</span> Types of vector data in QGIS</h2>
+<ul>
+<li>Points</li>
+<li>Lines</li>
+<li>Polygons</li>
+</ul>
+<blockquote>
+<p>layer &gt; add layer &gt; add vector layer</p>
+</blockquote>
+<p><img src="Images/addVectorLayer.png" alt="Adding Vector Layer" />
+- File
+- Folder
+- Database
+- Protocol</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="quick-start-to-qgis.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-vector.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
