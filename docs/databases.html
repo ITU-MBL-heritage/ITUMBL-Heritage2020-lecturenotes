@@ -122,6 +122,47 @@
             <section class="normal" id="section-">
 <div id="databases" class="section level1">
 <h1><span class="header-section-number">Chapter 9</span> Databases</h1>
+<p>QGIS has an ability to connect to various different databases. Geopackage, Oracle Spatial, PostGIS, SpatiaLite.</p>
+<div class="figure">
+<img src="Images/databases.png" alt="Databases that can be connected through QGIS" />
+<p class="caption">Databases that can be connected through QGIS</p>
+</div>
+<p>We are going to use PostGIS in our projects.</p>
+<blockquote>
+<p>PostGIS is the geographic extension of the database management system, PostgreSQL, which allows us to store geographic objects as part of our data tables. A geographic object is a special type of data that allows us to store a geographic position or a set of them as part of a line or a polygon. Essentially, PostGIS is a powerful tool that enables you to handle complex geographical data and visually explore this data when you use it along with graphical tools, such as QGIS.</p>
+</blockquote>
+<p>We will be hosting our PostGIS database using Google Cloud.To access it we need to connect using SSL. (However, the eduroam connection in the campus prevents us to use the port 5432 which is the usual postgreSQL port so we need to use out of the ITU network)</p>
+<p>To connect you will need to download 3 certificate files. server-ca.pem, client-cert.pem, client-key.pem. Download these files and place them to a folder that is accesible.</p>
+<p>From processing toolbox click the right most icon, <strong>options</strong>.</p>
+<p>From the menu select <strong>Authentication</strong>.</p>
+<div class="figure">
+<img src="Images/ManageCertificates.png" alt="Manage Certificates" />
+<p class="caption">Manage Certificates</p>
+</div>
+<p>And next select <strong>manage certificates</strong>.</p>
+<p>Here from the authorities tab, click + to add Google Cloud certificate.</p>
+<div class="figure">
+<img src="Images/certificatemanager.png" alt="Certificate Manager" />
+<p class="caption">Certificate Manager</p>
+</div>
+<p>Here from the import certificate menu, click … icon and locate your server-ca.pem file.</p>
+<div class="figure">
+<img src="Images/importcertificate.png" alt="Import Certificate" />
+<p class="caption">Import Certificate</p>
+</div>
+<p>Back from the certificate manager screen click to the identities tab and click + icon.</p>
+<p>From the import identity screen, select PKI PEM/DER Certificate Paths. For cert select client-cert.pem and for key select client-key.pem.</p>
+<p>Now close the windows and from the browser panel select PostGIS and right click and select new connection.</p>
+<div class="figure">
+<img src="Images/postgisServer.png" alt="PostGIS server settings" />
+<p class="caption">PostGIS server settings</p>
+</div>
+<p>Here you need to enter information required to setup a connection to our server. Fill out the information as following:</p>
+<div class="figure">
+<img src="Images/postGISinfo.png" alt="PostGIS information" />
+<p class="caption">PostGIS information</p>
+</div>
+<p>The username and password for our database is <strong>postgres</strong> and <strong>123post</strong>. After this step we will be connected to the server.</p>
 
 </div>
             </section>

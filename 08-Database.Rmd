@@ -1,4 +1,46 @@
 # Databases
 
+QGIS has an ability to connect to various different databases. Geopackage, Oracle Spatial, PostGIS, SpatiaLite.
+
+![Databases that can be connected through QGIS](Images\databases.png)
+
+We are going to use PostGIS in our projects.
+
+>PostGIS is the geographic extension of the database management system, PostgreSQL, which allows us to store geographic objects as part of our data tables. A geographic object is a special type of data that allows us to store a geographic position or a set of them as part of a line or a polygon. Essentially, PostGIS is a powerful tool that enables you to handle complex geographical data and visually explore this data when you use it along with graphical tools, such as QGIS.
+
+We will be hosting our PostGIS database using Google Cloud.To access it we need to connect using SSL. (However, the eduroam connection in the campus prevents us to use the port 5432 which is the usual postgreSQL port so we need to use out of the ITU network)
+
+To connect you will need to download 3 certificate files. server-ca.pem, client-cert.pem, client-key.pem. Download these files and place them to a folder that is accesible.
+
+From processing toolbox click the right most icon, **options**. 
+
+From the menu select **Authentication**. 
+
+![Manage Certificates](Images\ManageCertificates.png)
+
+And next select **manage certificates**.
+
+Here from the authorities tab, click + to add Google Cloud certificate.
+
+![Certificate Manager](Images\certificatemanager.png)
+
+Here from the import certificate menu, click ... icon and locate your server-ca.pem file.
+
+![Import Certificate](Images\importcertificate.png)
+
+
+Back from the certificate manager screen click to the identities tab and click + icon. 
+
+From the import identity screen, select PKI PEM/DER Certificate Paths. For cert select client-cert.pem and for key select client-key.pem.
+
+Now close the windows and from the browser panel select PostGIS and right click and select new connection.
+
+![PostGIS server settings](Images\postgisServer.png)
+
+Here you need to enter information required to setup a connection to our server. Fill out the information as following:
+
+![PostGIS information](Images\postGISinfo.png)
+
+The username and password for our database is **postgres** and **123post**. After this step we will be connected to the server.
 
 
