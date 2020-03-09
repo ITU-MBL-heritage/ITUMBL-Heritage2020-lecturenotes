@@ -152,6 +152,16 @@
 </div>
 <p>Back from the certificate manager screen click to the identities tab and click + icon.</p>
 <p>From the import identity screen, select PKI PEM/DER Certificate Paths. For cert select client-cert.pem and for key select client-key.pem.</p>
+<p>Next, close the identity screen and from the Authentication screen click + icon.</p>
+<div class="figure">
+<img src="Images/authentication.png" alt="Authentication window" />
+<p class="caption">Authentication window</p>
+</div>
+<p>From the dialogue box, select PKI stored identity certificate, and select the certificate that you have created (postgres). write a name (eg. Google Cloud) and save.</p>
+<div class="figure">
+<img src="Images/authentication2.png" alt="Authentication Dialogue Box" />
+<p class="caption">Authentication Dialogue Box</p>
+</div>
 <p>Now close the windows and from the browser panel select PostGIS and right click and select new connection.</p>
 <div class="figure">
 <img src="Images/postgisServer.png" alt="PostGIS server settings" />
@@ -163,6 +173,8 @@
 <p class="caption">PostGIS information</p>
 </div>
 <p>The username and password for our database is <strong>postgres</strong> and <strong>123post</strong>. After this step we will be connected to the server.</p>
+<p>Server connections work similar to the layers. If you have a geospatial data you can import or export to the database.</p>
+<p>For this project, we need to have a database of caravanserais as point geometries and we need topography information as vector layer.</p>
 
 </div>
             </section>
