@@ -196,11 +196,32 @@
 <p class="caption">PostGIS Connection</p>
 </div>
 <p>POSTGIS database uses SQL Structured Query Language , to create the table turk_han I used the following SQL query (Showing this for you as a reference you dont need to do this, I already created our tables.)</p>
-<pre><code>CREATE TABLE turk_han  ( id serial, common_names character(30),  alternative_names character(100), 
-village character(30), district character(30), province character(30), date character(30), 
-reference varchar, layer character(10),  the_geom geometry,    CONSTRAINT turk_pkey PRIMARY KEY (id)  );</code></pre>
-<pre><code>INSERT INTO turk_han (common_names, alternative_names, village, district, province, date, reference, layer, the_geom) VALUES (&#39;Alacahan Kervansarayı&#39;, NULL, &#39;Alacahan&#39;, &#39;Kangal&#39;, &#39;Sivas&#39;, &#39;1150-1180&#39;, NULL, &#39;VAR&#39;, ST_GeomFromEWKT(&#39;SRID=4326;POINT(37.5975095 39.1058708)&#39;));</code></pre>
-<p>Updating data</p>
+<pre><code>CREATE TABLE turk_han  ( id serial, 
+common_names character(30),  
+alternative_names character(100), 
+village character(30), 
+district character(30), 
+province character(30), 
+date character(30), 
+reference varchar, 
+layer character(10),  
+the_geom geometry,    
+CONSTRAINT turk_pkey PRIMARY KEY (id)  );</code></pre>
+<p>To insert a new feature/han we need to run a sql query. Below you can see an example feature.</p>
+<pre><code>INSERT INTO turk_han (common_names, 
+alternative_names, 
+village, 
+district, 
+province, 
+date, 
+reference, 
+layer, 
+the_geom) 
+VALUES (&#39;Alacahan Kervansarayı&#39;, NULL, &#39;Alacahan&#39;, &#39;Kangal&#39;, &#39;Sivas&#39;, &#39;1150-1180&#39;, NULL, &#39;VAR&#39;, ST_GeomFromEWKT(&#39;SRID=4326;POINT(37.5975095 39.1058708)&#39;));</code></pre>
+<p>To update data you need to first find the id of the feature that you want to change. For this you can use SELECT query.</p>
+<pre><code>SELECT * FROM turk_han
+WHERE common_name = &#39;Alacahan Kervansarayı&#39;</code></pre>
+<p>For example this query brings all the entries that has common_name as Alacahan Kervansarayı. For example, to update its location you can use the query below.</p>
 <pre><code>UPDATE turk_han
 SET the_geom = ST_GeomFromEWKT(&#39;SRID=4326;POINT(37.5975095 39.10587)&#39;)
 WHERE

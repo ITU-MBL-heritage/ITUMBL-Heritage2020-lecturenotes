@@ -41,46 +41,6 @@
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs}
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -408,6 +368,9 @@ QGIS is very flexible in styling data. We can style our layers to visualize the 
 \hypertarget{databases}{%
 \chapter{Databases}\label{databases}}
 
+\hypertarget{connection-to-postgis-using-ssl}{%
+\section{Connection to POSTGIS using SSL}\label{connection-to-postgis-using-ssl}}
+
 QGIS has an ability to connect to various different databases. Geopackage, Oracle Spatial, PostGIS, SpatiaLite.
 
 \begin{figure}
@@ -456,6 +419,12 @@ Here from the import certificate menu, click \ldots{} icon and locate your serve
 
 Back from the certificate manager screen click to the identities tab and click + icon.
 
+\begin{figure}
+\centering
+\includegraphics{Images/importIdentity.png}
+\caption{Import Identities}
+\end{figure}
+
 From the import identity screen, select PKI PEM/DER Certificate Paths. For cert select client-cert.pem and for key select client-key.pem.
 
 Next, close the identity screen and from the Authentication screen click + icon.
@@ -466,7 +435,7 @@ Next, close the identity screen and from the Authentication screen click + icon.
 \caption{Authentication window}
 \end{figure}
 
-From the dialogue box, select PKI stored identity certificate, and select the certificate that you have created (postgres). write a name (eg. Google Cloud) and save.
+From the dialogue box, select PKI stored identity certificate, and select the certificate that you have created (editor). write a name (eg. Google Cloud) and save.
 
 \begin{figure}
 \centering
@@ -490,11 +459,69 @@ Here you need to enter information required to setup a connection to our server.
 \caption{PostGIS information}
 \end{figure}
 
-The username and password for our database is \textbf{postgres} and \textbf{123post}. After this step we will be connected to the server.
+The username and password for our database is \textbf{editor} and \textbf{123post}. After this step we will be connected to the server.
 
 Server connections work similar to the layers. If you have a geospatial data you can import or export to the database.
 
 For this project, we need to have a database of caravanserais as point geometries and we need topography information as vector layer.
+
+\hypertarget{introduction-to-postgis}{%
+\section{Introduction to POSTGIS}\label{introduction-to-postgis}}
+
+After connecting to the database, you can see our two tables iran\_han and turk\_han on the left side of the screen.
+
+\begin{figure}
+\centering
+\includegraphics{Images/postgisConnection.png}
+\caption{PostGIS Connection}
+\end{figure}
+
+POSTGIS database uses SQL Structured Query Language , to create the table turk\_han I used the following SQL query (Showing this for you as a reference you dont need to do this, I already created our tables.)
+
+\begin{verbatim}
+CREATE TABLE turk_han  ( id serial, 
+common_names character(30),  
+alternative_names character(100), 
+village character(30), 
+district character(30), 
+province character(30), 
+date character(30), 
+reference varchar, 
+layer character(10),  
+the_geom geometry,    
+CONSTRAINT turk_pkey PRIMARY KEY (id)  );
+\end{verbatim}
+
+To insert a new feature/han we need to run a sql query. Below you can see an example feature.
+
+\begin{verbatim}
+INSERT INTO turk_han (common_names, 
+alternative_names, 
+village, 
+district, 
+province, 
+date, 
+reference, 
+layer, 
+the_geom) 
+VALUES ('Alacahan Kervansarayı', NULL, 'Alacahan', 'Kangal', 'Sivas', '1150-1180', NULL, 'VAR', ST_GeomFromEWKT('SRID=4326;POINT(37.5975095 39.1058708)'));
+\end{verbatim}
+
+To update data you need to first find the id of the feature that you want to change. For this you can use SELECT query.
+
+\begin{verbatim}
+SELECT * FROM turk_han
+WHERE common_name = 'Alacahan Kervansarayı'
+\end{verbatim}
+
+For example this query brings all the entries that has common\_name as Alacahan Kervansarayı. For example, to update its location you can use the query below.
+
+\begin{verbatim}
+UPDATE turk_han
+SET the_geom = ST_GeomFromEWKT('SRID=4326;POINT(37.5975095 39.10587)')
+WHERE
+    id = 4;
+\end{verbatim}
 
 \hypertarget{assignment}{%
 \chapter{Assignment}\label{assignment}}
@@ -518,84 +545,59 @@ Next step will to explore the ACCURACY of the data:
 \begin{itemize}
 \item
   Level 1: REGISTERED HISTORICAL BUILDINGS (TESCILLI BINALAR) by Ministry of Culture and Tourism, State Museums/Sites (Müzeler ve Ören Yerleri), Local Authorities (Belediyeler):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \url{https://www.kulturportali.gov.tr/}
+  \item
+    \url{https://muze.gov.tr/muzeler}
+  \end{itemize}
 \item
-  \url{https://www.kulturportali.gov.tr/}
+  Level 2: Researched Historical Buildings by Local and Academic Authorities.
+  ÇEKÜL: \url{https://www.cekulvakfi.org.tr/}
+  International Universities
+  Local/National Universities
 \item
-  \url{https://muze.gov.tr/muzeler}
+  Level 3: Travelers, Touristic Informations, Locals
+\item
+  Level 4: Digital Tools and Methods
 \end{itemize}
-
-Level 2: Researched Historical Buildings by Local and Academic Authorities.
-ÇEKÜL: \url{https://www.cekulvakfi.org.tr/}
-International Universities
-Local/National Universities
-Level 3: Travelers, Touristic Informations, Locals
-Level 4: Digital Tools and Methods
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{n =}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\StringTok{"Bursa - Konya"}\NormalTok{, }\StringTok{"AYS"}\NormalTok{, }\StringTok{"Bursa, Bilecik, Kütahya, Eskişehir, Afyon, Konya"}\NormalTok{) }
-\NormalTok{s =}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{, }\StringTok{"Denizli- Alanya- Konya"}\NormalTok{, }\StringTok{"TAN"}\NormalTok{, }\StringTok{"Denizli, Uşak, Burdur, Isparta, Antalya, (Alanya, Beyşehir, Eğirdir)"}\NormalTok{) }
-\NormalTok{b =}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{3}\NormalTok{, }\StringTok{"Mersin - Aksaray- Konya"}\NormalTok{, }\OtherTok{FALSE}\NormalTok{, }\OtherTok{TRUE}\NormalTok{) }
-\NormalTok{df =}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(n, s, b) }
-\NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(df, }\DataTypeTok{caption =} \StringTok{"Table with kable"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
 
 \begin{table}
 
-\caption{\label{tab:unnamed-chunk-3}Table with kable}
+\caption{\label{tab:unnamed-chunk-2}Assigned Areas}
 \centering
-\begin{tabular}[t]{l|l|l}
+\begin{tabular}[t]{r|l|l}
 \hline
-n & s & b\\
+n & location & name\\
 \hline
-1 & 2 & 3\\
+1 & Bursa - Konya & AYS\\
 \hline
-Bursa - Konya & Denizli- Alanya- Konya & Mersin - Aksaray- Konya\\
+2 & Denizli- Alanya- Konya & TAN\\
 \hline
-AYS & TAN & FALSE\\
+3 & Mersin - Aksaray- Konya & NUR\\
 \hline
-Bursa, Bilecik, Kütahya, Eskisehir, Afyon, Konya & Denizli, Usak, Burdur, Isparta, Antalya, (Alanya, Beysehir, Egirdir) & TRUE\\
+4 & Konya - Aksaray - Nevsehir & BEG\\
+\hline
+5 & Sakarya - Kayseri- Sivas & SUM\\
+\hline
+6 & Sinop - Sivas - Malatya & VAR\\
+\hline
+7 & Urfa - Kayseri & CEM\\
+\hline
+8 & Mardin - Sivas & FEY-GUL\\
+\hline
+9 & Igdir - Sivas & SEN\\
+\hline
+10 &  & SAT\\
+\hline
+11 &  & NIM\\
+\hline
+12 &  & SEP\\
 \hline
 \end{tabular}
 \end{table}
-
-1
-Bursa - Konya
-
-Bursa, Bilecik, Kütahya, Eskişehir, Afyon, Konya,
-2
-Denizli- Alanya- Konya
-
-Denizli, Uşak, Burdur, Isparta, Antalya, (Alanya, Beyşehir, Eğirdir)
-3
-Mersin - Aksaray- Konya
-
-Mersin, Karaman, Konya, Niğde, Aksaray, Adana, Osmaniye
-4
-Konya - Aksaray - Konya
-
-Konya -Aksaray- Nevşehir
-5
-Sakarya - Kayseri- Sivas
-
-Sakarya, Düzce, Bolu, Ankara, Çankırı, Kırıkkale, Kırşehir, Nevşehir, Kayseri, Sivas
-6
-Sinop - Sivas - Malatya
-
-Sinop, Kastamonu, Samsun, Amasya, Çorum, Yozgat, Tokat, Sivas, Malatya
-7
-Urfa - Kayseri
-
-Urfa, Kilis, Antep, Adıyaman, Maraş, Kayseri, Sivas
-8
-Mardin - Sivas
-
-Mardin, Şırnak, Siirt, Batman, Diyarbakır, Bingöl, Malatya, Elazığ, Tunceli, Sivas
-9
-Iğdır - Sivas
-
-Iğdır, Kars, Ağrı, Bitlis, Muş, Van, Erzurum, Bayburt, Gümüşhane, Erzincan, Sivas
 
 \hypertarget{collecting-the-data-creating-the-layer}{%
 \section{Collecting the data \& Creating the layer}\label{collecting-the-data-creating-the-layer}}
