@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 7 Printing Maps | MBL617 Theory and Methods in Digital Heritage</title>
+  <title>Chapter 10 Assignment | MBL617 Theory and Methods in Digital Heritage</title>
   <meta name="description" content="MBL617 Lecture Notes" />
   <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 7 Printing Maps | MBL617 Theory and Methods in Digital Heritage" />
+  <meta property="og:title" content="Chapter 10 Assignment | MBL617 Theory and Methods in Digital Heritage" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 7 Printing Maps | MBL617 Theory and Methods in Digital Heritage" />
+  <meta name="twitter:title" content="Chapter 10 Assignment | MBL617 Theory and Methods in Digital Heritage" />
   
   <meta name="twitter:description" content="MBL617 Lecture Notes" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="styling-data.html"/>
-<link rel="next" href="creating-data.html"/>
+<link rel="prev" href="databases.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -51,68 +51,6 @@
 
 
 
-<style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -161,7 +99,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="7" data-path="printing-maps.html"><a href="printing-maps.html"><i class="fa fa-check"></i><b>7</b> Printing Maps</a></li>
 <li class="chapter" data-level="8" data-path="creating-data.html"><a href="creating-data.html"><i class="fa fa-check"></i><b>8</b> Creating Data</a></li>
-<li class="chapter" data-level="9" data-path="databases.html"><a href="databases.html"><i class="fa fa-check"></i><b>9</b> Databases</a></li>
+<li class="chapter" data-level="9" data-path="databases.html"><a href="databases.html"><i class="fa fa-check"></i><b>9</b> Databases</a><ul>
+<li class="chapter" data-level="9.1" data-path="databases.html"><a href="databases.html#connection-to-postgis-using-ssl"><i class="fa fa-check"></i><b>9.1</b> Connection to POSTGIS using SSL</a></li>
+<li class="chapter" data-level="9.2" data-path="databases.html"><a href="databases.html#introduction-to-postgis"><i class="fa fa-check"></i><b>9.2</b> Introduction to POSTGIS</a></li>
+</ul></li>
 <li class="chapter" data-level="10" data-path="assignment.html"><a href="assignment.html"><i class="fa fa-check"></i><b>10</b> Assignment</a><ul>
 <li class="chapter" data-level="10.1" data-path="assignment.html"><a href="assignment.html#collecting-the-data-creating-the-layer"><i class="fa fa-check"></i><b>10.1</b> Collecting the data &amp; Creating the layer</a></li>
 </ul></li>
@@ -185,17 +126,141 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="printing-maps" class="section level1">
-<h1><span class="header-section-number">Chapter 7</span> Printing Maps</h1>
+<div id="assignment" class="section level1">
+<h1><span class="header-section-number">Chapter 10</span> Assignment</h1>
+<p>You have been collecting data from the written resources.The primary resources were:</p>
+<ul>
+<li>International database on caravanserais, OWTRAD</li>
+<li>Academic publications, ACUN, ERDMANN, ILTER, CEKUL, etc..</li>
+<li>Websites by travelers, TURKISHHANS</li>
+</ul>
+<p>You have been using QGIS, Google Earth, Gsheet, Gdrive to structure the data. As our approach is rather Geotemporal, for the next step, you will be using the central database of QGIS.</p>
+<p>Next step will to explore the ACCURACY of the data:</p>
+<ul>
+<li><p>Level 1: REGISTERED HISTORICAL BUILDINGS (TESCILLI BINALAR) by Ministry of Culture and Tourism, State Museums/Sites (Müzeler ve Ören Yerleri), Local Authorities (Belediyeler):</p>
+<ul>
+<li><a href="https://www.kulturportali.gov.tr/" class="uri">https://www.kulturportali.gov.tr/</a></li>
+<li><a href="https://muze.gov.tr/muzeler" class="uri">https://muze.gov.tr/muzeler</a></li>
+</ul></li>
+<li><p>Level 2: Researched Historical Buildings by Local and Academic Authorities.
+ÇEKÜL: <a href="https://www.cekulvakfi.org.tr/" class="uri">https://www.cekulvakfi.org.tr/</a>
+International Universities
+Local/National Universities</p></li>
+<li><p>Level 3: Travelers, Touristic Informations, Locals</p></li>
+<li><p>Level 4: Digital Tools and Methods</p></li>
+</ul>
+<table>
+<caption><span id="tab:unnamed-chunk-1">Table 10.1: </span>Assigned Areas</caption>
+<thead>
+<tr class="header">
+<th align="right">n</th>
+<th align="left">location</th>
+<th align="left">name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">Bursa - Konya</td>
+<td align="left">AYS</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">Denizli- Alanya- Konya</td>
+<td align="left">TAN</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="left">Mersin - Aksaray- Konya</td>
+<td align="left">NUR</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="left">Konya - Aksaray - Nevsehir</td>
+<td align="left">BEG</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="left">Sakarya - Kayseri- Sivas</td>
+<td align="left">SUM</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="left">Sinop - Sivas - Malatya</td>
+<td align="left">VAR</td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="left">Urfa - Kayseri</td>
+<td align="left">CEM</td>
+</tr>
+<tr class="even">
+<td align="right">8</td>
+<td align="left">Mardin - Sivas</td>
+<td align="left">FEY-GUL</td>
+</tr>
+<tr class="odd">
+<td align="right">9</td>
+<td align="left">Igdir - Sivas</td>
+<td align="left">SEN</td>
+</tr>
+<tr class="even">
+<td align="right">10</td>
+<td align="left"></td>
+<td align="left">SAT</td>
+</tr>
+<tr class="odd">
+<td align="right">11</td>
+<td align="left"></td>
+<td align="left">NIM</td>
+</tr>
+<tr class="even">
+<td align="right">12</td>
+<td align="left"></td>
+<td align="left">SEP</td>
+</tr>
+</tbody>
+</table>
+<div id="collecting-the-data-creating-the-layer" class="section level2">
+<h2><span class="header-section-number">10.1</span> Collecting the data &amp; Creating the layer</h2>
+<p>First step for this assignment is to gather the location info for the caravanserais that you are assigned.</p>
+<p>Create a GeoPackage layer.</p>
+<blockquote>
+<p>Layer&gt;Create Layer&gt;New GeoPackage Layer…</p>
+</blockquote>
+<div class="figure">
+<img src="Images/geopackage.png" alt="Create GeoPackage Layer" />
+<p class="caption">Create GeoPackage Layer</p>
+</div>
+<p>After creating an empty geopackage layer, we are going to create our caravanserais as points.</p>
+<p>Right click on the created layer and select <strong>Open Attribute Table</strong>.</p>
+<p>Here you can see our empty table we need to create as many fields as we require. We will at least require Name field as text and Longitude and Latitude as decimal fields. In this table to edit the layer we need to click on the <strong>Toggle Editing mode</strong> icon. Enter the fields with the collected data.</p>
+<div class="figure">
+<img src="Images/caravanseraiTable.png" alt="Create GeoPackage Layer" />
+<p class="caption">Create GeoPackage Layer</p>
+</div>
+<p>After creating all the features in our table we need to create the point geometries that is on the coordinates that we entered. For this, we are going to use <strong>Create points layer from table</strong> from processing toolbox.</p>
+<div class="figure">
+<img src="Images/geopackage.png" alt="Create GeoPackage Layer" />
+<p class="caption">Create GeoPackage Layer</p>
+</div>
+<p>After creating an empty geopackage layer, we are going to create our caravanserais as points.</p>
+<p>Right click on the created layer and select <strong>Open Attribute Table</strong>.</p>
+<p>Here you can see our empty table we need to create as many fields as we require. We will at least require Name field as text and Longitude and Latitude as decimal fields. In this table to edit the layer we need to click on the <strong>Toggle Editing mode</strong> icon. Enter the fields with the collected data.</p>
+<div class="figure">
+<img src="Images/createpoints.png" alt="Create Points Layer from table" />
+<p class="caption">Create Points Layer from table</p>
+</div>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="styling-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="creating-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="databases.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -226,7 +291,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/06-PrintingMaps.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/09-Assignment.Rmd",
 "text": "Edit"
 },
 "history": {

@@ -1,5 +1,6 @@
 # Databases
 
+## Connection to POSTGIS using SSL
 QGIS has an ability to connect to various different databases. Geopackage, Oracle Spatial, PostGIS, SpatiaLite.
 
 ![Databases that can be connected through QGIS](Images\databases.png)
@@ -31,13 +32,17 @@ Here from the import certificate menu, click ... icon and locate your server-ca.
 
 Back from the certificate manager screen click to the identities tab and click + icon. 
 
+![Import Identities](Images\importIdentity.png)
+
 From the import identity screen, select PKI PEM/DER Certificate Paths. For cert select client-cert.pem and for key select client-key.pem.
+
+
 
 Next, close the identity screen and from the Authentication screen click + icon. 
 
 ![Authentication window](Images\authentication.png)
 
-From the dialogue box, select PKI stored identity certificate, and select the certificate that you have created (postgres). write a name (eg. Google Cloud) and save.
+From the dialogue box, select PKI stored identity certificate, and select the certificate that you have created (editor). write a name (eg. Google Cloud) and save.
 
 ![Authentication Dialogue Box](Images\authentication2.png)
 
@@ -50,10 +55,65 @@ Here you need to enter information required to setup a connection to our server.
 
 ![PostGIS information](Images\postGISinfo.png)
 
-The username and password for our database is **postgres** and **123post**. After this step we will be connected to the server.
+The username and password for our database is **editor** and **123post**. After this step we will be connected to the server.
 
 Server connections work similar to the layers. If you have a geospatial data you can import or export to the database. 
 
 For this project, we need to have a database of caravanserais as point geometries and we need topography information as vector layer.
+
+## Introduction to POSTGIS
+
+After connecting to the database, you can see our two tables iran_han and turk_han on the left side of the screen. 
+
+![PostGIS Connection](Images\postgisConnection.png)
+
+POSTGIS database uses SQL Structured Query Language , to create the table turk_han I used the following SQL query (Showing this for you as a reference you dont need to do this, I already created our tables.)
+
+```{ }
+CREATE TABLE turk_han  ( id serial, 
+common_names character(30),  
+alternative_names character(100), 
+village character(30), 
+district character(30), 
+province character(30), 
+date character(30), 
+reference varchar, 
+layer character(10),  
+the_geom geometry,    
+CONSTRAINT turk_pkey PRIMARY KEY (id)  );
+```
+
+To insert a new feature/han we need to run a sql query. Below you can see an example feature.
+
+```{ }
+INSERT INTO turk_han (common_names, 
+alternative_names, 
+village, 
+district, 
+province, 
+date, 
+reference, 
+layer, 
+the_geom) 
+VALUES ('Alacahan Kervansarayı', NULL, 'Alacahan', 'Kangal', 'Sivas', '1150-1180', NULL, 'VAR', ST_GeomFromEWKT('SRID=4326;POINT(37.5975095 39.1058708)'));
+```
+
+
+To update data you need to first find the id of the feature that you want to change. For this you can use SELECT query.
+
+```{ }
+SELECT * FROM turk_han
+WHERE common_name = 'Alacahan Kervansarayı'
+```
+For example this query brings all the entries that has common_name as Alacahan Kervansarayı. For example, to update its location you can use the query below.
+
+	
+```{ }
+UPDATE turk_han
+SET the_geom = ST_GeomFromEWKT('SRID=4326;POINT(37.5975095 39.10587)')
+WHERE
+	id = 4;
+```
+
 
 
