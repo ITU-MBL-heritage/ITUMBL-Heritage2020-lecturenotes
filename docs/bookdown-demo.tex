@@ -511,7 +511,7 @@ To update data you need to first find the id of the feature that you want to cha
 
 \begin{verbatim}
 SELECT * FROM turk_han
-WHERE common_name = 'Alacahan Kervansarayı'
+WHERE common_names = 'Alacahan Kervansarayı';
 \end{verbatim}
 
 For example this query brings all the entries that has common\_name as Alacahan Kervansarayı. For example, to update its location you can use the query below.
@@ -521,6 +521,12 @@ UPDATE turk_han
 SET the_geom = ST_GeomFromEWKT('SRID=4326;POINT(37.5975095 39.10587)')
 WHERE
     id = 4;
+\end{verbatim}
+
+To see longitude we can run another query:
+
+\begin{verbatim}
+SELECT common_names, ST_X(the_geom::geometry) AS longitude FROM turk_han;
 \end{verbatim}
 
 \hypertarget{assignment}{%

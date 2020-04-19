@@ -103,7 +103,7 @@ To update data you need to first find the id of the feature that you want to cha
 
 ```{ }
 SELECT * FROM turk_han
-WHERE common_name = 'Alacahan Kervansarayı'
+WHERE common_names = 'Alacahan Kervansarayı';
 ```
 For example this query brings all the entries that has common_name as Alacahan Kervansarayı. For example, to update its location you can use the query below.
 
@@ -115,5 +115,10 @@ WHERE
 	id = 4;
 ```
 
+To see longitude we can run another query:
+
+```{ }
+SELECT common_names, ST_X(the_geom::geometry) AS longitude FROM turk_han;
+```
 
 

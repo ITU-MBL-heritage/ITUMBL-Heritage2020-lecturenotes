@@ -220,12 +220,14 @@ the_geom)
 VALUES (&#39;Alacahan Kervansarayı&#39;, NULL, &#39;Alacahan&#39;, &#39;Kangal&#39;, &#39;Sivas&#39;, &#39;1150-1180&#39;, NULL, &#39;VAR&#39;, ST_GeomFromEWKT(&#39;SRID=4326;POINT(37.5975095 39.1058708)&#39;));</code></pre>
 <p>To update data you need to first find the id of the feature that you want to change. For this you can use SELECT query.</p>
 <pre><code>SELECT * FROM turk_han
-WHERE common_name = &#39;Alacahan Kervansarayı&#39;</code></pre>
+WHERE common_names = &#39;Alacahan Kervansarayı&#39;;</code></pre>
 <p>For example this query brings all the entries that has common_name as Alacahan Kervansarayı. For example, to update its location you can use the query below.</p>
 <pre><code>UPDATE turk_han
 SET the_geom = ST_GeomFromEWKT(&#39;SRID=4326;POINT(37.5975095 39.10587)&#39;)
 WHERE
     id = 4;</code></pre>
+<p>To see longitude we can run another query:</p>
+<pre><code>SELECT common_names, ST_X(the_geom::geometry) AS longitude FROM turk_han;</code></pre>
 
 </div>
 </div>
